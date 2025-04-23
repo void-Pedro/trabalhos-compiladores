@@ -4,5 +4,5 @@ Repositório criado para armazenar os códigos dos trabalhos realizados para a m
 - **T1 - Analisador Léxico**
 
 ### Autores:
-- Pedro Borges
-- Matheus Vieira
+- Pedro Borges  804071 BCC
+- Matheus Vieira 791085 BCC
