@@ -11,8 +11,9 @@ Este projeto implementa um **analisador léxico** para a Linguagem Algorítmica 
 
 ## Pré-requisitos
 
-- [Java JDK 21]([https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html))
+- [Java JDK 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 - [Apache Maven](https://maven.apache.org/download.cgi)
+- GCC (Mingw no Windows) - Para rodar o corretor automático
 
 Certifique-se de ter essas ferramentas instaladas e configuradas no seu ambiente.
 
@@ -64,9 +65,9 @@ Linha 10: cadeia literal não fechada
 
 Existem duas opções para utilizar o corretor automático:
 
-### Opção 1 - Rodar o arquivo `run_corretor.bat`
+### Opção 1 - Rodar o arquivo `run_corretor.*`
 
-Basta executar o arquivo `run_corretor.bat` fornecido com o projeto.
+Basta executar o arquivo `run_corretor.bat` ou `run_corretor.sh` (dependendo do SO) fornecido com o projeto.
 
 ### Opção 2 - Comandos no terminal
 
