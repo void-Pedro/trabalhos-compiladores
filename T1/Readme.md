@@ -20,13 +20,13 @@ Certifique-se de ter essas ferramentas instaladas e configuradas no seu ambiente
 
 ## Compilação do Projeto
 
-Para compilar o projeto, utilize o Maven executando o seguinte comando na raiz do projeto:
+Para compilar o projeto, utilize o Maven executando o seguinte comando na raiz do projeto "alguma lexico":
 
 ```bash
 mvn clean package
 ```
 
-Isso irá gerar um arquivo `.jar` na pasta `target`.
+Isso irá compilar o projeto gerar um arquivo `.jar` na pasta `target`.
 
 ## Execução
 
@@ -42,7 +42,7 @@ java -jar caminho/para/seu-compilador.jar caminho/arquivo-entrada.txt caminho/ar
 ### Exemplo de Uso
 
 ```bash
-java -jar target/meu-compilador.jar test_cases/entrada1.txt temp/saidaProduzida/saida1.txt
+java -jar ./target/alguma-lexico-1.0-SNAPSHOT-jar-with-dependencies.jar ..\test_cases\1.casos_teste_t1\entrada\1-algoritmo_2-2_apostila_LA.txt ..\test_cases\1.casos_teste_t1\saida\algoritmo2-2.txt
 ```
 
 ## Tratamento de Erros
@@ -75,7 +75,7 @@ Execute os seguintes comandos no terminal, substituindo adequadamente os caminho
 
 ```bash
 mvn clean package
-java -jar ../compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-lexico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../temp/ ../test_cases "RA_ALUNO1, RA_ALUNO2" t1
+java -jar ../compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-lexico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../temp/ ../test_cases "804071, 791085" t1
 ```
 
 Certifique-se que o Java esteja configurado corretamente na variável de ambiente `PATH`. Após a execução, o corretor irá informar quais testes passaram ou falharam, detalhando as notas obtidas.
