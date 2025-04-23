@@ -11,9 +11,8 @@ Este projeto implementa um **analisador léxico** para a Linguagem Algorítmica 
 
 ## Pré-requisitos
 
-- [Java SE](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Java JDK 21]([https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html))
 - [Apache Maven](https://maven.apache.org/download.cgi)
-- [ANTLR versão 4.13.1](https://www.antlr.org/)
 
 Certifique-se de ter essas ferramentas instaladas e configuradas no seu ambiente.
 
