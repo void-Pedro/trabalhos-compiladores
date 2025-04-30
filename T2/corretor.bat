@@ -1,0 +1,1 @@
+java -jar ./corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./alguma-sintatico/target/alguma-sintatico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ./temp/ ./casos-de-teste "804071, 791085" t2
