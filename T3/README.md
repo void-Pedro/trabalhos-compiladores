@@ -6,11 +6,10 @@
 Este projeto estende o trabalho feito até aqui, implementando um Analisador Semântico para a Linguagem Algorítmica (LA).  
 O programa:
 
-1. 
-2.  
-3. 
-4. 
-5. 
+1. Lê um arquivo-fonte em LA;
+2. Usa gramática **LA.g4** (ANTLR 4) para validar a estrutura semântica;
+3. Reporta os erros encontrados, indicando linha e o que causou a falha;
+5. Salva as mensagens no arquivo de saída, conforme especificação do T3.
 
 ## Autores
 
@@ -61,19 +60,20 @@ java -jar target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar \
 
 Tipo de erro | Mensagem gerada
 -------------|----------------
+Identificador já declarado anteriormente no escopo | Linha 6: identificador troco ja declarado anteriormente
+Tipo não declarado | `Linha 5: tipo sem_tipo nao declarado`
+Identificador não declarado | `Linha 10: identificador xxx nao declarado`
+Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao compativel para formato`
 
 
 ## Casos de teste automáticos
 
-Para usar o corretor oficial:
+Para usar o corretor oficial é possivel utilizar os comandos na pasta do T3:
 
 ```bash
-
-java -jar ./corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./alguma-sintatico/target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ./temp/ ./casos-de-teste "804071, 791085" t2
-
+cd ./alguma-semantico
+mvn clean package
+java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t3
 ```
-
-
-
-(Substitua caminhos, RAs e nomes conforme necessário.)
+*OBS: Também é possível executar o corretor pelo arquivo run_corretor.bat ou run_corretor.sh*
 
