@@ -52,7 +52,7 @@ java -jar <jar-gerado> <arquivo-entrada> <arquivo-saida>
 
 ```bash
 java -jar target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar \
-     test_cases/exemplo1.la \
+     casos-de-teste/1.casos_teste_t1/entrada/exemplo1.la \
      temp/saida/exemplo1.txt
 ```
 
