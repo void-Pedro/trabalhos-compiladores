@@ -1,9 +1,9 @@
-# Trabalho 3 – Analisador **Semântico** da Linguagem LA  
+# Trabalho 4 – Analisador **Semântico** da Linguagem LA  
 *(Disciplina: Construção de Compiladores – DC/UFSCar, 2025)*
 
 ## Visão geral
 
-Este projeto estende o trabalho feito até aqui, implementando um Analisador Semântico para a Linguagem Algorítmica (LA).  
+Este projeto estende o trabalho feito até aqui, implementando um Analisador Semântico para a Linguagem Algorítmica (LA). 
 O programa:
 
 1. Lê um arquivo-fonte em LA;
@@ -60,20 +60,24 @@ java -jar target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar \
 
 Tipo de erro | Mensagem gerada
 -------------|----------------
-Identificador já declarado anteriormente no escopo | Linha 6: identificador troco ja declarado anteriormente
+Identificador já declarado anteriormente no escopo. Neste trabalho  | `Linha 6: identificador troco ja declarado anteriormente`
 Tipo não declarado | `Linha 5: tipo sem_tipo nao declarado`
 Identificador não declarado | `Linha 10: identificador xxx nao declarado`
-Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao compativel para formato`
+Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao compativel para ^ponteiro`
+Incompatibilidade entre argumentos e parâmetros formais (número, ordem e tipo) | `Linha44: incompatibilidade de parametros na chamada de menorInteiro`
+Uso do comando 'retorne' em um escopo não permitido | `Linha 49: comando retorne nao permitido nesse escopo`
+
+### Obs: diferente do T3, também são considerados ponteiros, registros e funções na identificação dos erros
 
 
 ## Casos de teste automáticos
 
-Para usar o corretor oficial é possivel utilizar os comandos na pasta do T3:
+Para usar o corretor oficial é possivel utilizar os comandos na pasta do T4:
 
 ```bash
 cd ./alguma-semantico
 mvn clean package
-java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t3
+java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t4
 ```
 *OBS: Também é possível executar o corretor pelo arquivo run_corretor.bat ou run_corretor.sh*
 
