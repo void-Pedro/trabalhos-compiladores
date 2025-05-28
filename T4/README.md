@@ -9,7 +9,7 @@ O programa:
 1. Lê um arquivo-fonte em LA;
 2. Usa gramática **LA.g4** (ANTLR 4) para validar a estrutura semântica;
 3. Reporta os erros encontrados, indicando linha e o que causou a falha;
-5. Salva as mensagens no arquivo de saída, conforme especificação do T3.
+5. Salva as mensagens no arquivo de saída, conforme especificação do T4.
 
 ## Autores
 
