@@ -67,7 +67,7 @@ Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao c
 Incompatibilidade entre argumentos e parâmetros formais (número, ordem e tipo) | `Linha44: incompatibilidade de parametros na chamada de menorInteiro`
 Uso do comando 'retorne' em um escopo não permitido | `Linha 49: comando retorne nao permitido nesse escopo`
 
-### Obs: diferente do T3, também são considerados ponteiros, registros e funções na identificação dos erros
+#### Obs: diferente do T3, também são considerados ponteiros, registros e funções na identificação dos erros
 
 
 ## Casos de teste automáticos
