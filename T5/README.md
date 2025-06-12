@@ -10,6 +10,32 @@ Este projeto implementa a última etapa da construção de um compilador para a 
 3. Gerar código C equivalente ao programa de entrada.
 4. Reportar erros semânticos (se houver) e salvar as mensagens no arquivo de saída conforme especificações.
 
+## Funcionalidade
+
+O compilador possui duas funções principais:
+
+1. Leitura e validação: Realiza análise léxica, sintática e semântica do código em LA.
+2. Geração de código: Converte o programa válido em LA para código C, que será compilado e executado.
+
+## Exemplo de Entrada:
+algoritmo
+  declare
+    x: literal
+  leia(x)
+  escreva(x)
+fim_algoritmo
+
+## Exemplo de Saída Produzida (em C):
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    char x[80];
+    gets(x);
+    printf("%s",x);
+    return 0;
+}
+
+
 ## Autores
 
 | Nome | RA | Curso |
@@ -67,7 +93,7 @@ Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao c
 
 ## Casos de teste automáticos
 
-Para usar o corretor oficial é possivel utilizar os comandos na pasta do T3:
+Para usar o corretor oficial é possivel utilizar os comandos na pasta do T5:
 
 ```bash
 cd ./alguma-semantico
