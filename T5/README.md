@@ -1,15 +1,14 @@
-# Trabalho 3 – Analisador **Semântico** da Linguagem LA  
+# Trabalho 5 – Geração de Código C da Linguagem LA  
 *(Disciplina: Construção de Compiladores – DC/UFSCar, 2025)*
 
 ## Visão geral
 
-Este projeto estende o trabalho feito até aqui, implementando um Analisador Semântico para a Linguagem Algorítmica (LA).  
-O programa:
+Este projeto implementa a última etapa da construção de um compilador para a Linguagem Algorítmica (LA), envolvendo a geração de código C. O objetivo é converter programas escritos na linguagem LA em código C executável, utilizando os conceitos desenvolvidos nas etapas anteriores do curso. O compilador possui a capacidade de:
 
 1. Lê um arquivo-fonte em LA;
 2. Usa gramática **LA.g4** (ANTLR 4) para validar a estrutura semântica;
-3. Reporta os erros encontrados, indicando linha e o que causou a falha;
-5. Salva as mensagens no arquivo de saída, conforme especificação do T3.
+3. Gerar código C equivalente ao programa de entrada.
+4. Reportar erros semânticos (se houver) e salvar as mensagens no arquivo de saída conforme especificações.
 
 ## Autores
 
@@ -73,7 +72,7 @@ Para usar o corretor oficial é possivel utilizar os comandos na pasta do T3:
 ```bash
 cd ./alguma-semantico
 mvn clean package
-java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t3
+java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t5
 ```
 *OBS: Também é possível executar o corretor pelo arquivo run_corretor.bat ou run_corretor.sh*
 
