@@ -18,4 +18,12 @@ public class EntradaTabelaDeSimbolos {
         this.tipo = tipo;
         this.estrutura = estrutura;
     }
+
+    public String getNome() {
+        return name;
+    }
+
+    public Tipos getTipo() {
+        return tipo;
+    }
 }

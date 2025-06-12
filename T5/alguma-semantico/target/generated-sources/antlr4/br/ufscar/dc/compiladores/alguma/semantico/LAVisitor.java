@@ -149,6 +149,12 @@ public interface LAVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdSe(LAParser.CmdSeContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link LAParser#cmdSenao}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCmdSenao(LAParser.CmdSenaoContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link LAParser#cmdCaso}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -274,6 +280,12 @@ public interface LAVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitParcela_nao_unario(LAParser.Parcela_nao_unarioContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LAParser#parenteses_expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParenteses_expr(LAParser.Parenteses_exprContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LAParser#exp_relacional}.
 	 * @param ctx the parse tree

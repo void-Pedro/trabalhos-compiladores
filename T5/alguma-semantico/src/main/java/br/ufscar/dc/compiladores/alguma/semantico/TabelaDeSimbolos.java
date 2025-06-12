@@ -46,6 +46,9 @@ public class TabelaDeSimbolos {
     //}
 
     public EntradaTabelaDeSimbolos.Tipos verificar(String name) {
+        System.out.println("TABELA:");
+        //System.out.println(name);
+        System.out.println(tabelaDeSimbolos.keySet());
         return tabelaDeSimbolos.get(name).tipo;
     }
 

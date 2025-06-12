@@ -293,6 +293,18 @@ public class LABaseListener implements LAListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCmdSenao(LAParser.CmdSenaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCmdSenao(LAParser.CmdSenaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCmdCaso(LAParser.CmdCasoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -540,6 +552,18 @@ public class LABaseListener implements LAListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitParcela_nao_unario(LAParser.Parcela_nao_unarioContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParenteses_expr(LAParser.Parenteses_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParenteses_expr(LAParser.Parenteses_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

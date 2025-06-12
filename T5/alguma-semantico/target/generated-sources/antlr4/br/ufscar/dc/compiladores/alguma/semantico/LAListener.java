@@ -238,6 +238,16 @@ public interface LAListener extends ParseTreeListener {
 	 */
 	void exitCmdSe(LAParser.CmdSeContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LAParser#cmdSenao}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmdSenao(LAParser.CmdSenaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LAParser#cmdSenao}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmdSenao(LAParser.CmdSenaoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LAParser#cmdCaso}.
 	 * @param ctx the parse tree
 	 */
@@ -447,6 +457,16 @@ public interface LAListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitParcela_nao_unario(LAParser.Parcela_nao_unarioContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LAParser#parenteses_expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterParenteses_expr(LAParser.Parenteses_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LAParser#parenteses_expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitParenteses_expr(LAParser.Parenteses_exprContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LAParser#exp_relacional}.
 	 * @param ctx the parse tree
