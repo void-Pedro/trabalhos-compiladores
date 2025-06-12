@@ -18,14 +18,17 @@ O compilador possui duas funções principais:
 2. Geração de código: Converte o programa válido em LA para código C, que será compilado e executado.
 
 ## Exemplo de Entrada:
+```
 algoritmo
   declare
     x: literal
   leia(x)
   escreva(x)
 fim_algoritmo
+```
 
 ## Exemplo de Saída Produzida (em C):
+```
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
@@ -34,7 +37,7 @@ int main() {
     printf("%s",x);
     return 0;
 }
-
+```
 
 ## Autores
 
