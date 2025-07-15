@@ -1,15 +1,23 @@
-# Trabalho 3 – Analisador **Semântico** da Linguagem LA  
+# Trabalho 6 – Gerador de Currículos  
 *(Disciplina: Construção de Compiladores – DC/UFSCar, 2025)*
 
 ## Visão geral
 
-Este projeto estende o trabalho feito até aqui, implementando um Analisador Semântico para a Linguagem Algorítmica (LA).  
+O Curriculo-Gen transforma um arquivo texto com a estrutura desejada do currículo em uma página HTML estilizada. Durante o processo, são realizadas validações sintáticas e semânticas usando ANTLR 4, garantindo a consistência do formato antes da geração.
+
 O programa:
 
-1. Lê um arquivo-fonte em LA;
-2. Usa gramática **LA.g4** (ANTLR 4) para validar a estrutura semântica;
-3. Reporta os erros encontrados, indicando linha e o que causou a falha;
-5. Salva as mensagens no arquivo de saída, conforme especificação do T3.
+1. Leitura de um arquivo .txt com a definição do currículo;
+2. Análise sintática e semântica com a gramática LA.g4 (ANTLR 4);
+3. Em caso de erros, relatório detalhado é gerado com número da linha e descrição da falha;
+4. Se não houver erros, gera um arquivo .html contendo o currículo formatado.
+
+Funcionalidades Principais:
+
+- Leitura de entrada: interpreta seções, campos e itens do currículo;
+- Validação: detecta identificadores duplicados, tipos não declarados, usos indevidos e incompatibilidades;
+- Relatório de erros: mensagens claras com referência de linha;
+- Geração de HTML: saída pronta para visualização em navegadores.
 
 ## Autores
 
@@ -36,7 +44,7 @@ Na raiz do projeto:
 mvn clean package
 ```
 
-* Gera `target/alguma-semantico-<versao>-jar-with-dependencies.jar`.  
+* Gera `target/curriculo-gen-<versao>-jar-with-dependencies.jar`.  
 * As classes geradas pelo ANTLR ficam em `target/generated-sources/antlr4`.
 
 ## Execução
@@ -45,15 +53,15 @@ mvn clean package
 java -jar <jar-gerado> <arquivo-entrada> <arquivo-saida>
 ```
 
-* **arquivo-entrada** – programa fonte em LA.  
-* **arquivo-saida**  – caminho completo onde o relatório será gravado.
+* **arquivo-entrada** – arquivo txt com estrutura do currículo.  
+* **arquivo-saida**  – arquivo html com currículo gerado.
 
 ### Exemplo
 
 ```bash
-java -jar target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar \
-     test_cases/exemplo1.la \
-     temp/saida/exemplo1.txt
+java -jar target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar \
+     teste/curriculo1.txt \
+     teste/saida.html
 ```
 
 ## Erros tratados
@@ -66,14 +74,10 @@ Identificador não declarado | `Linha 10: identificador xxx nao declarado`
 Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao compativel para formato`
 
 
-## Casos de teste automáticos
-
-Para usar o corretor oficial é possivel utilizar os comandos na pasta do T3:
 
 ```bash
-cd ./alguma-semantico
+cd ./curriculo-gen
 mvn clean package
-java -jar ../corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar  "java -jar ./target/alguma-semantico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc ../corretor/temp/ ../corretor/casos-de-teste/ "804071, 791085" t3
+java -jar "java -jar ./target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar" teste/curriculo1.txt teste/saida.html
 ```
-*OBS: Também é possível executar o corretor pelo arquivo run_corretor.bat ou run_corretor.sh*
 
