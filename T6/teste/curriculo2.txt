@@ -1,0 +1,51 @@
+curriculo:
+dados:
+  nome: "Jorge Silva"
+  idade: 25
+  email: "jorge.silva@email.com"
+  telefone: "1999999999"
+  cidade: "São Paulo"
+fim
+experiencias:
+  - cargo: "Estagiário em engenharia de software"
+    localizacao: "São Paulo"
+    empresa: "Google"
+    conclusao: "2019"
+  - cargo: "Desenvolvedor Backend"
+    empresa: "Microsoft"
+    conclusao: "2022"
+fim
+objetivo:
+  - "Trabalhar como desenvolvedor backend"
+fim
+idiomas:
+  - lingua: "Inglês"
+    nivel: "Fluente"
+  - lingua: "Espanhol"
+    nivel: "Intermediário"
+fim
+educacao:
+  - nivel: "Ensino Médio"
+    curso: "Geral"
+    localizacao: "São Paulo"
+    instituicao: "Escola Estadual"
+    conclusao: "2015"
+  - nivel: "Bacharelado"
+    curso: "Ciência da Computação"
+    localizacao: "São Carlos"
+    instituicao: "UFSCar"
+    conclusao: "2019"
+fim
+links:
+  - "https://www.linkedin.com/in/jorge-silva"
+  - "https://github.com/jorge-silva"
+fim
+habilidades:
+  - "Java"
+  - "C#"
+  - "SQL"
+fim
+outros:
+  - "Participação em projetos open source"
+fim
+fimcurriculo
