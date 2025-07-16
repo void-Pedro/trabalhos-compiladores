@@ -64,15 +64,6 @@ java -jar ./target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar \
      ../teste/saida.pdf
 ```
 
-## Erros tratados
-
-Tipo de erro | Mensagem gerada
--------------|----------------
-Identificador já declarado anteriormente no escopo | Linha 6: identificador troco ja declarado anteriormente
-Tipo não declarado | `Linha 5: tipo sem_tipo nao declarado`
-Identificador não declarado | `Linha 10: identificador xxx nao declarado`
-Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao compativel para formato`
-
 
 
 ```bash
