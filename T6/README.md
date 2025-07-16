@@ -1,6 +1,8 @@
 # Trabalho 6 – Gerador de Currículos  
 *(Disciplina: Construção de Compiladores – DC/UFSCar, 2025)*
 
+Link vídeo explicativo: https://youtu.be/A-RojD0gTek
+
 ## Visão geral
 
 O Curriculo-Gen transforma um arquivo texto com a estrutura desejada do currículo em uma página HTML estilizada. Durante o processo, são realizadas validações sintáticas e semânticas usando ANTLR 4, garantindo a consistência do formato antes da geração.
