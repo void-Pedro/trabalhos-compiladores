@@ -18,6 +18,12 @@ fim
 objetivo:
   - "Trabalhar como desenvolvedor backend"
 fim
+idiomas:
+  - lingua: "Inglês"
+    nivel: "Fluente"
+  - lingua: "Espanhol"
+    nivel: "Intermediário"
+fim
 educacao:
   - nivel: "Ensino Médio"
     curso: "Geral"
@@ -30,20 +36,14 @@ educacao:
     instituicao: "UFSCar"
     conclusao: "2019"
 fim
+links:
+  - "https://www.linkedin.com/in/jorge-silva"
+  - "https://github.com/jorge-silva"
+fim
 habilidades:
   - "Java"
   - "C#"
   - "SQL"
-fim
-idiomas:
-  - lingua: "Inglês"
-    nivel: "Fluente"
-  - lingua: "Espanhol"
-    nivel: "Intermediário"
-fim
-links:
-  - "https://www.linkedin.com/in/jorge-silva"
-  - "https://github.com/jorge-silva"
 fim
 outros:
   - "Participação em projetos open source"

@@ -30,7 +30,78 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
     @Override
     public String visitCurriculo(CurriculoContext ctx) {
         StringBuilder html = new StringBuilder();
-        html.append("<html><body>\n");
+        html.append("<html>\n");
+
+        html.append("<head><style>\n");
+        html.append("body {\n" +
+                "  font-family: Arial, sans-serif;\n" +
+                "  margin: 10px auto 40px;\n" +
+                "  max-width: 800px;\n" +
+                "  line-height: 1.6;\n" +
+                "  background-color: #f9f9f9;\n" +
+                "  color: #333;\n" +
+                "  padding: 20px;\n" +
+                "  border-radius: 8px;\n" +
+                "  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n" +
+                "}\n" +
+                "\n" +
+                "h1 {\n" +
+                "  text-align: center;\n" +
+                "  font-size: 36px;\n" +
+                "  color: #2c3e50;\n" +
+                "  border-bottom: 2px solid #2c3e50;\n" +
+                "  padding-bottom: 10px;\n" +
+                "  margin-bottom: 30px;\n" +
+                "}\n" +
+                "\n" +
+                "h2 {\n" +
+                "  color: #34495e;\n" +
+                "  border-left: 5px solid #3498db;\n" +
+                "  padding-left: 10px;\n" +
+                "  margin-top: 30px;\n" +
+                "  font-size: 24px;\n" +
+                "}\n" +
+                "\n" +
+                "ul {\n" +
+                "  list-style-type: none;\n" +
+                "  padding-left: 0;\n" +
+                "  margin-top: 10px;\n" +
+                "}\n" +
+                "\n" +
+                "li {\n" +
+                "  margin-bottom: 10px;\n" +
+                "}\n" +
+                "\n" +
+                "strong {\n" +
+                "  color: #2c3e50;\n" +
+                "}\n" +
+                "\n" +
+                "a {\n" +
+                "  color: #2980b9;\n" +
+                "  text-decoration: none;\n" +
+                "}\n" +
+                "\n" +
+                "a:hover {\n" +
+                "  text-decoration: underline;\n" +
+                "}\n" +
+                "\n" +
+                "@media (max-width: 600px) {\n" +
+                "  body {\n" +
+                "    margin: 10px;\n" +
+                "    padding: 15px;\n" +
+                "  }\n" +
+                "\n" +
+                "  h1 {\n" +
+                "    font-size: 28px;\n" +
+                "  }\n" +
+                "\n" +
+                "  h2 {\n" +
+                "    font-size: 20px;\n" +
+                "  }\n" +
+                "}\n");
+        html.append("</style></head>\n");
+
+        html.append("<body>\n");
         html.append("<h1>Currículo").append("</h1>\n");
 
         for (SecaoContext secao : ctx.secao()) {
@@ -59,13 +130,13 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
 
         if (ctx.NOME() != null) {
             String nome = ctx.CADEIA().getText().replace("\"", "");
-            html.append("<strong>Nome:</strong> ").append(nome).append("<br>\n");
+            html.append("<strong>Nome:</strong> ").append(nome).append("<br />\n");
         } else if (ctx.IDADE() != null) {
             String idade = ctx.NUM().getText();
-            html.append("<strong>Idade:</strong> ").append(idade).append("<br>\n");
+            html.append("<strong>Idade:</strong> ").append(idade).append("<br />\n");
         } else if (ctx.EMAIL() != null) {
             String email = ctx.CADEIA().getText().replace("\"", "");
-            html.append("<strong>Email:</strong> ").append(email).append("<br>\n");
+            html.append("<strong>Email:</strong> ").append(email).append("<br />\n");
         } else if (ctx.TELEFONE() != null) {
             String telefone = "";
             if(ctx.CADEIA() == null) {
@@ -73,10 +144,10 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
             } else {
                 telefone = ctx.CADEIA().getText().replace("\"", "");
             }
-            html.append("<strong>Telefone:</strong> ").append(telefone).append("<br>\n");
+            html.append("<strong>Telefone:</strong> ").append(telefone).append("<br />\n");
         } else if (ctx.CIDADE() != null) {
             String cidade = ctx.CADEIA().getText().replace("\"", "");
-            html.append("<strong>Cidade:</strong> ").append(cidade).append("<br>\n");
+            html.append("<strong>Cidade:</strong> ").append(cidade).append("<br />\n");
         }
 
         html.append("</li>\n");
@@ -102,18 +173,19 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
         for (CampoExperienciaContext campoCtx : ctx.campoExperiencia()) {
             if (campoCtx.CARGO() != null) {
                 String cargo = campoCtx.CADEIA().getText().replace("\"", "");
-                html.append("<strong>Cargo:</strong> ").append(cargo).append("<br>\n");
+                html.append("<strong>Cargo:</strong> ").append(cargo).append("<br />\n");
             } else if (campoCtx.LOCALIZACAO() != null) {
                 String localizacao = campoCtx.CADEIA().getText().replace("\"", "");
-                html.append("<strong>Localização:</strong> ").append(localizacao).append("<br>\n");
+                html.append("<strong>Localização:</strong> ").append(localizacao).append("<br />\n");
             } else if (campoCtx.EMPRESA() != null) {
                 String empresa = campoCtx.CADEIA().getText().replace("\"", "");
-                html.append("<strong>Empresa:</strong> ").append(empresa).append("<br>\n");
+                html.append("<strong>Empresa:</strong> ").append(empresa).append("<br />\n");
             } else if (campoCtx.CONCLUSAO() != null) {
                 String conclusao = campoCtx.CADEIA().getText().replace("\"", "");
-                html.append("<strong>Conclusão:</strong> ").append(conclusao).append("<br>\n");
+                html.append("<strong>Conclusão:</strong> ").append(conclusao).append("<br />\n");
             }
         }
+        html.append("</li>\n");
         return html.toString();
     }
 
@@ -147,10 +219,10 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
 
         if (ctx.LINGUA() != null) {
             String nomeIdioma = ctx.CADEIA().getText().replace("\"", "");
-            html.append("<strong>Idioma:</strong> ").append(nomeIdioma).append("<br>\n");
+            html.append("<strong>Idioma:</strong> ").append(nomeIdioma).append("<br />\n");
         } else if (ctx.NIVEL() != null) {
             String nivel = ctx.CADEIA().getText().replace("\"", "");
-            html.append("<strong>Nível:</strong> ").append(nivel).append("<br>\n");
+            html.append("<strong>Nível:</strong> ").append(nivel).append("<br />\n");
         }
 
         html.append("</li>\n");
@@ -187,7 +259,7 @@ public class CurriculoGerador extends curriculoBaseVisitor<String>{
             html.append(" - ").append(localizacao);
         }
         if (!conclusao.isEmpty()) {
-            html.append(" (").append(conclusao).append(")<br>\n");
+            html.append(" (").append(conclusao).append(")<br />\n");
         }
 
         html.append("</li>\n");

@@ -32,20 +32,11 @@ public class Main {
 
             curriculoParser.CurriculoContext arvore = parser.curriculo();
 
-            // Adicionar o código do analisador semantico
-            //CurriculoGerador visitor = new CurriculoSemantico();
-            //String html = visitor.visit(arvore);
-
-            // Criar uma classe auxiliar para armazenar erros semanticos
-            //for (String err : Auxiliar.errosSemanticos) {
-            //    p.println(err);
-            //}
-
             CurriculoGerador visitor = new CurriculoGerador();
             String html = visitor.visit(arvore);
 
-            createFile(args[1], html);
-            System.out.println("Arquivo HTML gerado com sucesso: " + new File(args[1]).getAbsolutePath());
+            PDFGen.createPdfFromHtml(html, args[1]);
+            System.out.println("Arquivo PDF gerado com sucesso: " + new File(args[1]).getAbsolutePath());
 
         } catch (Exception e) {
             System.err.println("Erros ao executar o código");

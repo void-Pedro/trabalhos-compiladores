@@ -1,2 +1,2 @@
-Linha 18: token recognition error at: 'x'
+Linha 11: erro sintatico proximo a 5
 Fim da compilacao
