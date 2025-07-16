@@ -10,14 +10,14 @@ O programa:
 1. Leitura de um arquivo .txt com a definição do currículo;
 2. Análise sintática e semântica com a gramática LA.g4 (ANTLR 4);
 3. Em caso de erros, relatório detalhado é gerado com número da linha e descrição da falha;
-4. Se não houver erros, gera um arquivo .html contendo o currículo formatado.
+4. Se não houver erros, gera um arquivo .pdf contendo o currículo formatado.
 
 Funcionalidades Principais:
 
 - Leitura de entrada: interpreta seções, campos e itens do currículo;
 - Validação: detecta identificadores duplicados, tipos não declarados, usos indevidos e incompatibilidades;
 - Relatório de erros: mensagens claras com referência de linha;
-- Geração de HTML: saída pronta para visualização em navegadores.
+- Geração de PDF: saída pronta para visualização em navegadores.
 
 ## Autores
 
@@ -54,14 +54,14 @@ java -jar <jar-gerado> <arquivo-entrada> <arquivo-saida>
 ```
 
 * **arquivo-entrada** – arquivo txt com estrutura do currículo.  
-* **arquivo-saida**  – arquivo html com currículo gerado.
+* **arquivo-saida**  – arquivo pdf com currículo gerado.
 
 ### Exemplo
 
 ```bash
-java -jar target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar \
-     teste/curriculo1.txt \
-     teste/saida.html
+java -jar ./target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar \
+     ../teste/curriculo.txt \
+     ../teste/saida.pdf
 ```
 
 ## Erros tratados
@@ -78,6 +78,6 @@ Atribuição não compatível com o tipo declarado | `Linha 12: atribuicao nao c
 ```bash
 cd ./curriculo-gen
 mvn clean package
-java -jar "java -jar ./target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar" teste/curriculo1.txt teste/saida.html
+java -jar "java -jar ./target/curriculo-gen-1.0-SNAPSHOT-jar-with-dependencies.jar" ../teste/curriculo.txt teste/saida.pdf
 ```
 
