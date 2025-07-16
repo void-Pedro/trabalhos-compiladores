@@ -8,7 +8,7 @@ O Curriculo-Gen transforma um arquivo texto com a estrutura desejada do currícu
 O programa:
 
 1. Leitura de um arquivo .txt com a definição do currículo;
-2. Análise sintática e semântica com a gramática LA.g4 (ANTLR 4);
+2. Análise sintática e léxica com a gramática curriculo.g4 (ANTLR 4);
 3. Em caso de erros, relatório detalhado é gerado com número da linha e descrição da falha;
 4. Se não houver erros, gera um arquivo .pdf contendo o currículo formatado.
 
